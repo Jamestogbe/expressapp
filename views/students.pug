@@ -1,0 +1,8 @@
+extends template
+
+block content
+  h1 #{header}
+  ul.list-group
+    each regstudent, i in regstudents
+      li.list-group-item
+        a(href="/students/"+regstudent._id)= `${regstudent.sname} ${regstudent.fname}`

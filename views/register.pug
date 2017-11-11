@@ -1,0 +1,35 @@
+extends template
+
+block content
+  h1 #{header}
+  form(method='POST', action='/students/register')
+    hr
+    #form-group
+      label Firstname:
+      input.form-control(name='fname', type='text')
+    hr
+    #form-group
+      label Surname:
+      input.form-control(name='sname', type='text')
+    hr
+    #form-group
+      label Age:
+      input.form-control(name='age', type='number')
+    hr
+    #form-group
+      label Sex:
+      input.form-control(name='sex', type='text')
+    hr
+    #form-group
+      label Class:
+      input.form-control(name='class', type='text')
+    hr
+    #form-group
+      label Nationality:
+      input.form-control(name='nationality', type='text')
+    hr
+    #form-group
+      label Religion:
+      input.form-control(name='religion', type='text')
+    hr
+    input.btn.btn-primary(type='submit', value='Register')

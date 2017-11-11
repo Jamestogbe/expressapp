@@ -1,0 +1,17 @@
+extends template
+
+block content
+  h1= `${student.sname} ${student.fname}`
+  ul.list-group
+    li.list-group-item Firstname: #{student.fname}
+    li.list-group-item Surname: #{student.sname}
+    li.list-group-item Age: #{student.age}
+    li.list-group-item Sex: #{student.sex}
+    li.list-group-item Class: #{student.class}
+    li.list-group-item Nationality: #{student.nationality}
+    li.list-group-item Religion: #{student.religion}
+  hr
+  a.btn.btn-default(href='/students/edit/'+student._id) Edit
+  a.btn.btn-danger.delete(href='#', data-id=student._id) Delete
+  
+    
