@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 //Connect to Database
-mongoose.connect('mongodb://localhost/nodeapp');
+mongoose.connect('mongodb://<admin>:<admin>@ds155695.mlab.com:55695/expressapp_db');
 let db = mongoose.connection;
 
 //Check for DB connection
@@ -15,7 +15,7 @@ db.once('open', function(){
 //Check for DB errors
 db.on('error', function(err){
   console.log(err);
-})
+});
 
 //Init App
 const app = express();
